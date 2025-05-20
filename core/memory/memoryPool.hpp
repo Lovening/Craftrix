@@ -21,6 +21,10 @@
  * @tparam T 要分配的对象类型
  * @tparam ThreadLocal 是否使用线程本地存储提高并发性能(默认开启)
  */
+
+namespace CRAFTRIX {
+
+
 template <typename T, bool ThreadLocal = true>
 class MemoryPool {
 public:
@@ -597,5 +601,6 @@ bool MemoryPool<T, ThreadLocal>::checkDeadPattern(void* ptr) const {
 }
 #endif
 
+}
 
 #endif // _MEMORY_POOL_H_
